@@ -18,9 +18,9 @@
 \usepackage{geometry}
 
 \usepackage[
-automark, %Kapitelangaben in Kopfzeile automatisch erstellen
-headsepline, %Trennlinie unter Kopfzeile
-ilines %Trennlinie linksbündig ausrichten
+    automark, %Kapitelangaben in Kopfzeile automatisch erstellen
+    headsepline, %Trennlinie unter Kopfzeile
+    ilines %Trennlinie linksbündig ausrichten
 ]{scrlayer-scrpage}
 
 %fortlaufendes Durchnummerieren der Fußnoten
@@ -44,10 +44,12 @@ ilines %Trennlinie linksbündig ausrichten
 %Code
 %Siehe auch: http://ctan.ebinger.cc/tex-archive/macros/latex/contrib/listings/lstdrvrs.pdf
 \usepackage{listings}
-\usepackage{uarial}
+\usepackage[scaled]{helvet}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
 \lstset{
     basicstyle=\scriptsize\ttfamily, 	% Default font
-	numbers=left,              			% Location of line numbers
+    numbers=left,              			% Location of line numbers
     numberstyle=\tiny,          		% Style of line numbers
     % stepnumber=2,              		% Margin between line numbers
     numbersep=5pt,             			% Margin between line numbers and text
@@ -68,8 +70,8 @@ ilines %Trennlinie linksbündig ausrichten
     %framexrightmargin=5pt,
     %framexbottommargin=4pt,
     % backgroundcolor=\color{lightgray},
-	showstringspaces=false,
-	numberbychapter=true
+    showstringspaces=false,
+    numberbychapter=true
 }
 
 \usepackage{chngcntr}
