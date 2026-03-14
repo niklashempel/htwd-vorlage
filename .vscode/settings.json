@@ -1,3 +1,32 @@
 {
-  "latex-workshop.latex.outDir": "%DIR%/build"
+  "latex-workshop.latex.outDir": "build",
+  "latex-workshop.latex.auxDir": "build",
+
+  // Prevent VS Code from stopping latexmk on first-pass warnings
+  "latex-workshop.message.error.show": false,
+  "latex-workshop.message.warning.show": false,
+
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk",
+      "tools": ["latexmk"]
+    }
+  ],
+
+  "latex-workshop.latex.watch.delay": 800,
+
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-pdf",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-shell-escape",
+        "%DOC%"
+      ]
+    }
+  ]
 }
